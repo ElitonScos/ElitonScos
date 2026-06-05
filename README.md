@@ -11,7 +11,7 @@
 
 ---
 
-Engenheiro de automação e backend com foco em pipelines de processamento inteligente, integração de LLMs em sistemas de produção e infraestrutura orientada a dados. Trabalho com múltiplas linguagens e tecnologias — Go, Python, Rust, TypeScript, PHP, Ruby — escolhendo a ferramenta certa para cada problema.
+Engenheiro de automação e backend com foco em pipelines de processamento inteligente, integração de LLMs em sistemas de produção e infraestrutura orientada a dados. Trabalho com múltiplas linguagens e tecnologias: Go, Python, Rust, TypeScript, PHP, Ruby escolhendo a ferramenta certa para cada problema.
 
 ---
 
