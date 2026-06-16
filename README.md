@@ -109,6 +109,4 @@ Reverse proxy Nginx com upstream least_conn e health endpoint, API Go multi-stag
 
 <div align="center">
 
-*"Automação é sobre remover fricção — não sobre substituir julgamento."*
-
 </div>
