@@ -29,10 +29,15 @@ Engenheiro de automação e backend com foco em pipelines de processamento intel
 **Infra & Dados**
 
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white)
+![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat&logo=helm&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![RabbitMQ](https://img.shields.io/badge/RabbitMQ-FF6600?style=flat&logo=rabbitmq&logoColor=white)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
+![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat&logo=grafana&logoColor=white)
 
 **AI / ML**
 
@@ -43,6 +48,24 @@ Engenheiro de automação e backend com foco em pipelines de processamento intel
 ---
 
 ## Projetos
+
+### ☸️ [k8s-observability-platform](https://github.com/ElitonScos/k8s-observability-platform)
+**Plataforma Kubernetes local com observabilidade completa**
+
+Cluster Kubernetes em kind (3 nós) orquestrando dois serviços com PostgreSQL e RabbitMQ, expostos via NGINX Ingress e empacotados num Helm chart próprio. Observabilidade com Prometheus + Grafana (dashboard provisionado como código), autoscaling com HPA e metrics-server.
+
+`Kubernetes` `Helm` `Prometheus` `Grafana` `kind` `NGINX Ingress`
+
+---
+
+### 🏗️ [iac-cloud-pipeline](https://github.com/ElitonScos/iac-cloud-pipeline)
+**Infraestrutura como Código com Terraform e CI/CD completo**
+
+Terraform provisionando recursos AWS (S3, DynamoDB, SQS + DLQ, IAM, VPC) via LocalStack, sem conta na nuvem. Pipeline GitHub Actions com lint, testes, build da imagem, scan de segurança com Trivy, push para o GHCR e terraform plan/apply.
+
+`Terraform` `AWS` `LocalStack` `GitHub Actions` `Trivy` `Docker`
+
+---
 
 ### 🔗 [hookbridge-platform](https://github.com/ElitonScos/hookbridge-platform)
 **Plataforma multi-linguagem de recebimento e classificação de webhooks**
