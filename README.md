@@ -11,7 +11,7 @@
 
 ---
 
-Engenheiro de automação e backend com foco em pipelines de processamento inteligente, integração de LLMs em sistemas de produção e infraestrutura orientada a dados. Trabalho com múltiplas linguagens e tecnologias: Go, Python, Rust, TypeScript, PHP, Ruby escolhendo a ferramenta certa para cada problema.
+Engenheiro de automação e backend, expandindo para DevOps e infraestrutura. Construo pipelines de processamento, integro LLMs em sistemas de produção e cuido de infraestrutura orientada a dados: containers, orquestração, CI/CD e observabilidade. Trabalho com múltiplas linguagens (Go, Python, Rust, TypeScript, PHP, Ruby) escolhendo a ferramenta certa para cada problema.
 
 ---
 
@@ -49,25 +49,34 @@ Engenheiro de automação e backend com foco em pipelines de processamento intel
 
 ## Projetos
 
-### ☸️ [k8s-observability-platform](https://github.com/ElitonScos/k8s-observability-platform)
+### [k8s-observability-platform](https://github.com/ElitonScos/k8s-observability-platform)
 **Plataforma Kubernetes local com observabilidade completa**
 
-Cluster Kubernetes em kind (3 nós) orquestrando dois serviços com PostgreSQL e RabbitMQ, expostos via NGINX Ingress e empacotados num Helm chart próprio. Observabilidade com Prometheus + Grafana (dashboard provisionado como código), autoscaling com HPA e metrics-server.
+Cluster Kubernetes em kind (3 nós) orquestrando dois serviços com PostgreSQL e RabbitMQ, expostos via NGINX Ingress e empacotados num Helm chart próprio. Observabilidade com Prometheus e Grafana (dashboard provisionado como código), autoscaling com HPA e metrics-server.
 
 `Kubernetes` `Helm` `Prometheus` `Grafana` `kind` `NGINX Ingress`
 
 ---
 
-### 🏗️ [iac-cloud-pipeline](https://github.com/ElitonScos/iac-cloud-pipeline)
+### [iac-cloud-pipeline](https://github.com/ElitonScos/iac-cloud-pipeline)
 **Infraestrutura como Código com Terraform e CI/CD completo**
 
-Terraform provisionando recursos AWS (S3, DynamoDB, SQS + DLQ, IAM, VPC) via LocalStack, sem conta na nuvem. Pipeline GitHub Actions com lint, testes, build da imagem, scan de segurança com Trivy, push para o GHCR e terraform plan/apply.
+Terraform provisionando recursos AWS (S3, DynamoDB, SQS com DLQ, IAM, VPC) via LocalStack, sem conta na nuvem. Pipeline GitHub Actions com lint, testes, build da imagem, scan de segurança com Trivy, push para o GHCR e terraform plan/apply.
 
 `Terraform` `AWS` `LocalStack` `GitHub Actions` `Trivy` `Docker`
 
 ---
 
-### 🔗 [hookbridge-platform](https://github.com/ElitonScos/hookbridge-platform)
+### [infrastack](https://github.com/ElitonScos/infrastack)
+**Stack de infraestrutura com Nginx, Go e CI/CD automatizado**
+
+Reverse proxy Nginx com upstream least_conn e health endpoint, API Go multi-stage, scripts Bash validados com ShellCheck (deploy, rollback, healthcheck) e pipeline GitHub Actions completo.
+
+`Go` `Nginx` `Bash` `Docker` `GitHub Actions`
+
+---
+
+### [hookbridge](https://github.com/ElitonScos/hookbridge)
 **Plataforma multi-linguagem de recebimento e classificação de webhooks**
 
 Receiver em PHP (Slim 4) com validação HMAC-SHA256, processor em Go que consome o banco e despacha eventos, classificador em Ruby (regras léxicas) exposto via HTTP. Tudo orquestrado com Docker Compose e PostgreSQL.
@@ -76,16 +85,16 @@ Receiver em PHP (Slim 4) com validação HMAC-SHA256, processor em Go que consom
 
 ---
 
-### 🔐 [vault-api](https://github.com/ElitonScos/vault-api)
+### [vaultapi](https://github.com/ElitonScos/vaultapi)
 **API REST de gerenciamento de credenciais com autenticação JWT**
 
-FastAPI com SQLAlchemy + Alembic, autenticação JWT (RS256), criptografia AES-256 para secrets em repouso, cobertura de testes com pytest e pipeline CI no GitHub Actions.
+FastAPI com SQLAlchemy e Alembic, autenticação JWT (RS256), criptografia AES-256 para secrets em repouso, cobertura de testes com pytest e pipeline CI no GitHub Actions.
 
 `Python` `FastAPI` `PostgreSQL` `JWT` `Docker`
 
 ---
 
-### 📧 [mailflow-processor](https://github.com/ElitonScos/mailflow-processor)
+### [mailflow](https://github.com/ElitonScos/mailflow)
 **Automação de pedidos via e-mail com extração por LLM**
 
 Daemon Go que monitora IMAP, extrai dados estruturados de e-mails de pedido via GPT-4o e persiste os registros no PostgreSQL com status de processamento. Inclui dashboard HTTP para acompanhamento.
@@ -94,7 +103,7 @@ Daemon Go que monitora IMAP, extrai dados estruturados de e-mails de pedido via 
 
 ---
 
-### 📨 [eventrelay-broker](https://github.com/ElitonScos/eventrelay-broker)
+### [eventrelay](https://github.com/ElitonScos/eventrelay)
 **Broker de eventos assíncronos com RabbitMQ**
 
 Sistema produtor/consumidor com topic exchange, dead-letter queue, retry com backoff exponencial e persistência no PostgreSQL. Publisher e consumer em Python com aio-pika (async).
@@ -103,7 +112,7 @@ Sistema produtor/consumidor com topic exchange, dead-letter queue, retry com bac
 
 ---
 
-### 🔍 [semanticvault](https://github.com/ElitonScos/semanticvault)
+### [semanticvault](https://github.com/ElitonScos/semanticvault)
 **Busca semântica por similaridade vetorial**
 
 API TypeScript/Node com pgvector (PostgreSQL), geração de embeddings local via @xenova/transformers (sem API key), índice IVFFlat e busca por cosine similarity. Totalmente offline.
@@ -112,24 +121,9 @@ API TypeScript/Node com pgvector (PostgreSQL), geração de embeddings local via
 
 ---
 
-### 🕷️ [dataharvest-scraper](https://github.com/ElitonScos/dataharvest-scraper)
+### [dataharvest](https://github.com/ElitonScos/dataharvest)
 **Web scraper concorrente escrito em Rust**
 
-Worker pool em Rust com Tokio, scraping via reqwest + scraper, fila de jobs no PostgreSQL com sqlx, retry automático e API HTTP (Axum) para submissão e consulta de resultados.
+Worker pool em Rust com Tokio, scraping via reqwest e scraper, fila de jobs no PostgreSQL com sqlx, retry automático e API HTTP (Axum) para submissão e consulta de resultados.
 
 `Rust` `Axum` `Tokio` `PostgreSQL` `Docker`
-
----
-
-### ⚙️ [devops-infrastack](https://github.com/ElitonScos/devops-infrastack)
-**Stack de infraestrutura com Nginx, Go e CI/CD automatizado**
-
-Reverse proxy Nginx com upstream least_conn e health endpoint, API Go multi-stage, scripts Bash validados com ShellCheck (deploy, rollback, healthcheck), pipeline GitHub Actions completo.
-
-`Go` `Nginx` `Bash` `Docker` `GitHub Actions`
-
----
-
-<div align="center">
-
-</div>
