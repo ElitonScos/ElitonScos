@@ -11,7 +11,7 @@
 
 ---
 
-Engenheiro de automação e backend, expandindo para DevOps e infraestrutura. Construo pipelines de processamento, integro LLMs em sistemas de produção e cuido de infraestrutura orientada a dados: containers, orquestração, CI/CD e observabilidade. Trabalho com múltiplas linguagens (Go, Python, Rust, TypeScript, PHP, Ruby) escolhendo a ferramenta certa para cada problema.
+Engenheiro de backend e automação com foco em **IA aplicada e arquitetura de soluções**. Projeto arquiteturas de IA (agentes com function/tool calling e RAG), integro LLMs em sistemas de produção e cuido de infraestrutura orientada a dados: containers, orquestração, CI/CD e observabilidade. Trabalho com múltiplas linguagens (Go, Python, Rust, TypeScript, PHP, Ruby) escolhendo a ferramenta certa para cada problema.
 
 ---
 
@@ -42,12 +42,33 @@ Engenheiro de automação e backend, expandindo para DevOps e infraestrutura. Co
 **AI / ML**
 
 ![OpenAI](https://img.shields.io/badge/OpenAI-412991?style=flat&logo=openai&logoColor=white)
+![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=flat&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat)
+![RAG](https://img.shields.io/badge/RAG-6E56CF?style=flat)
 ![pgvector](https://img.shields.io/badge/pgvector-4169E1?style=flat&logo=postgresql&logoColor=white)
 ![Transformers](https://img.shields.io/badge/Transformers.js-F5A623?style=flat)
 
 ---
 
 ## Projetos
+
+### [erpmind](https://github.com/ElitonScos/erpmind)
+**ERP com IA nativa: agente com function calling + RAG**
+
+API FastAPI de ERP (pedidos, estoque, financeiro) com Clean Architecture, mais um agente de IA (LangGraph) que chama os módulos como ferramentas (function calling) e responde perguntas fundamentadas em RAG sobre pgvector. Roda com LLM ou 100% offline. Observabilidade com Langfuse, avaliação de RAG, Docker, CI, diagramas C4 e ADRs.
+
+`Python` `FastAPI` `LangGraph` `RAG` `pgvector` `Docker`
+
+---
+
+### [agentflow](https://github.com/ElitonScos/agentflow)
+**Automação inteligente de processos com motor de workflow**
+
+Classifica solicitações de negócio com LLM (structured output) e decide a ação — encaminhar, escalar, auto-resolver ou revisão humana — sobre um motor de workflow (DAG) próprio com retry, detecção de ciclos e human-in-the-loop por limiar de confiança. Roda com LLM ou offline.
+
+`Python` `FastAPI` `LangChain` `Workflow Engine` `Docker`
+
+---
 
 ### [k8s-observability-platform](https://github.com/ElitonScos/k8s-observability-platform)
 **Plataforma Kubernetes local com observabilidade completa**
