@@ -64,7 +64,7 @@ API FastAPI de ERP (pedidos, estoque, financeiro) com Clean Architecture, mais u
 ### [agentflow](https://github.com/ElitonScos/agentflow)
 **Automação inteligente de processos com motor de workflow**
 
-Classifica solicitações de negócio com LLM (structured output) e decide a ação — encaminhar, escalar, auto-resolver ou revisão humana — sobre um motor de workflow (DAG) próprio com retry, detecção de ciclos e human-in-the-loop por limiar de confiança. Roda com LLM ou offline.
+Classifica solicitações de negócio com LLM (structured output) e decide a ação - encaminhar, escalar, auto-resolver ou revisão humana - sobre um motor de workflow (DAG) próprio com retry, detecção de ciclos e human-in-the-loop por limiar de confiança. Roda com LLM ou offline.
 
 `Python` `FastAPI` `LangChain` `Workflow Engine` `Docker`
 
